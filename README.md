@@ -5,6 +5,10 @@ Run the `BC Label: Update label getters` command to automatically generate (or r
 Remove a label getter by deleting the label variable itself and running the `BC Label: Update label getters` command.
 
 ## Instructions
+### Installation
+1. `code --force --install-extension <path to vsix file>`
+
+### Usage
 1. Create a codeunit
 2. Open the extension settings
 3. Insert the file name of the codeunit into the input box 'Target File'
