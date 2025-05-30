@@ -1,4 +1,4 @@
-# bc-lbl-handler README
+# (WIP) bc-lbl-handler README
 This extension lets you maintain a single, central label repository for your Business Central solutions.
 Add any new label variables to the designated codeunit.
 Run the `BC Label: Update label getters` command to automatically generate (or refresh) each corresponding getter procedure.
