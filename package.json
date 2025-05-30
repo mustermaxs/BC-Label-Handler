@@ -1,0 +1,65 @@
+{
+  "name": "bc-lbl-handler",
+  "displayName": "bc-lbl-handler",
+  "description": "",
+  "version": "0.0.2",
+  "icon": "images/bcLabelHandler.png",
+  "publisher": "masi",
+  "extensionDependencies": [
+    "ms-dynamics-smb.al"
+  ],
+  "engines": {
+    "vscode": "^1.100.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:bc-lbl-handler.updateLabelGetters"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "bc-lbl-handler.updateLabelGetters",
+        "title": "BC Label: Update label getters"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "BC Label Handler",
+      "properties": {
+        "bc-lbl-handler.enable": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable the BC Label Handler"
+        },
+        "bcLabelHandler.targetFile": {
+          "type": "string",
+          "default": "LblRepo.codeunit.al",
+          "description": "The target file to update the label getters in."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.100.0",
+    "@typescript-eslint/eslint-plugin": "^8.31.1",
+    "@typescript-eslint/parser": "^8.31.1",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.5.2",
+    "eslint": "^9.25.1",
+    "typescript": "^5.8.3"
+  }
+}

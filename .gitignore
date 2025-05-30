@@ -1,0 +1,7 @@
+!/*.vsix
+!/README.md
+*.vscode
+*.snapshot
+out/**
+node_modules/**
+.vscode-test/**
